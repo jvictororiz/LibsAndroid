@@ -15,12 +15,18 @@ import java.util.List;
 import br.com.jvictororiz.libs.R;
 
 public class OurRecyclerviewAdapter extends RecyclerView.Adapter<OurRecyclerviewAdapter.ViewHolder> {
+    private int idLayout;
+
+    public OurRecyclerviewAdapter(int idLayout) {
+        this.idLayout = idLayout;
+    }
+
     List<String> itens = new ArrayList<>(Arrays.asList("1", "2", "3", "4", "5"));
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new ViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.item_tinder, parent, false));
+        return new ViewHolder(LayoutInflater.from(parent.getContext()).inflate(idLayout, parent, false));
     }
 
     @Override
@@ -45,7 +51,9 @@ public class OurRecyclerviewAdapter extends RecyclerView.Adapter<OurRecyclerview
         }
 
         public void bind(String item) {
-            ((TextView) itemView.findViewById(R.id.tv_text)).setText(item);
+            TextView textView = itemView.findViewById(R.id.tv_text);
+            if (textView != null)
+                textView.setText(item);
         }
     }
 }

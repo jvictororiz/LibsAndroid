@@ -5,7 +5,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
-import br.com.jvictororiz.libs.ui.main.BaseFragment;
+import br.com.jvictororiz.libs.ui.main.fragments.BaseFragment;
 
 /**
  * A [FragmentPagerAdapter] that returns a fragment corresponding to

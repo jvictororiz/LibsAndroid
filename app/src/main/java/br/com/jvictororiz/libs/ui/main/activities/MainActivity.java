@@ -1,4 +1,4 @@
-package br.com.jvictororiz.libs;
+package br.com.jvictororiz.libs.ui.main.activities;
 
 import android.os.Bundle;
 
@@ -7,23 +7,26 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.tabs.TabLayout;
 
-import br.com.jvictororiz.libs.ui.main.BaseFragment;
-import br.com.jvictororiz.libs.ui.main.EsfregarViewFragment;
+import br.com.jvictororiz.libs.R;
+import br.com.jvictororiz.libs.ui.main.fragments.BaseFragment;
+import br.com.jvictororiz.libs.ui.main.fragments.EsfregarViewFragment;
 import br.com.jvictororiz.libs.adapters.SectionsPagerAdapter;
-import br.com.jvictororiz.libs.ui.main.TinderCardsFragment;
+import br.com.jvictororiz.libs.ui.main.fragments.GoNubankFragment;
+import br.com.jvictororiz.libs.ui.main.fragments.TinderCardsFragment;
 
 public class MainActivity extends AppCompatActivity {
 
     private BaseFragment[] myFragments = {
             EsfregarViewFragment.newInstance(),
-            TinderCardsFragment.newInstance()
+            TinderCardsFragment.newInstance(),
+            GoNubankFragment.newInstance()
     };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter( getSupportFragmentManager(), myFragments);
+        SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager(), myFragments);
         ViewPager viewPager = findViewById(R.id.view_pager);
         viewPager.setAdapter(sectionsPagerAdapter);
         TabLayout tabs = findViewById(R.id.tabs);

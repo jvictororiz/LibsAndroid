@@ -1,4 +1,4 @@
-package br.com.jvictororiz.libs.ui.main;
+package br.com.jvictororiz.libs.ui.main.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

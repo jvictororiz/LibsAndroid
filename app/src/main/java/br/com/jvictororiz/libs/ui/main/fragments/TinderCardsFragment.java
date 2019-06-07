@@ -1,4 +1,4 @@
-package br.com.jvictororiz.libs.ui.main;
+package br.com.jvictororiz.libs.ui.main.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -7,10 +7,7 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
-
-import com.goibibo.libs.views.ScratchRelativeLayoutView;
 
 import br.com.jvictororiz.libs.R;
 import br.com.jvictororiz.libs.adapters.OurRecyclerviewAdapter;
@@ -43,7 +40,7 @@ public class TinderCardsFragment extends BaseFragment {
         super.onViewCreated(view, savedInstanceState);
         if (getView() != null) {
             RecyclerView rvTinder = getView().findViewById(R.id.rv_tinder);
-            final OurRecyclerviewAdapter adapter = new OurRecyclerviewAdapter();
+            final OurRecyclerviewAdapter adapter = new OurRecyclerviewAdapter(R.layout.item_tinder);
             SwipeableTouchHelperCallback swipeableTouchHelperCallback = new SwipeableTouchHelperCallback(new OnItemSwiped() {
                 //Called after swiping view, place to remove top item from your recyclerview adapter
                 @Override

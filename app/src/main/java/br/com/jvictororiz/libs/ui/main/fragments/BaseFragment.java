@@ -1,4 +1,4 @@
-package br.com.jvictororiz.libs.ui.main;
+package br.com.jvictororiz.libs.ui.main.fragments;
 
 
 import androidx.fragment.app.Fragment;
